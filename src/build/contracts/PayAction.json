@@ -1,0 +1,73 @@
+{
+  "contract_name": "PayAction",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "kill",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_param",
+          "type": "uint256"
+        }
+      ],
+      "name": "action",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "payable": false,
+      "type": "constructor"
+    },
+    {
+      "payable": true,
+      "type": "fallback"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "Pay",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "x",
+          "type": "uint256"
+        }
+      ],
+      "name": "Error",
+      "type": "event"
+    }
+  ],
+  "unlinked_binary": "0x6060604052341561000c57fe5b5b5b5b6102258061001e6000396000f300606060405236156100305763ffffffff60e060020a60003504166341c0e1b5811461006d578063af1306281461007f575b61006b5b604080516002815290517f2e36a7093f25f22bd4cbdeb6040174c3ba4c5fe8f1abc04e7c3c48f26c7413e09181900360200190a15b565b005b341561007557fe5b61006b6100a6565b005b341561008757fe5b6100926004356100b4565b604080519115158252519081900360200190f35b33600160a060020a0316ff5b565b600060006000600084925082600160a060020a031663b837c58e6000604051602001526040518163ffffffff1660e060020a028152600401809050602060405180830381600087803b151561010557fe5b6102c65a03f1151561011357fe5b50505060405180519050915082600160a060020a0316637ba136806000604051602001526040518163ffffffff1660e060020a028152600401809050602060405180830381600087803b151561016557fe5b6102c65a03f1151561017357fe5b5050604080518051600160a060020a03861682526020820181905282519094507f357b676c439b9e49b4410f8eb8680bee4223724802d8e3fd422e1756f87b475f93509081900390910190a1604051600160a060020a0383169082156108fc029083906000818181858888f1935050505015156101ec57fe5b600193505b5050509190505600a165627a7a72305820636457532fa2d75bf0be13eec2c49017fc3efc2a0ef629cca2781c661064c99f0029",
+  "networks": {},
+  "schema_version": "0.0.5",
+  "updated_at": 1501221556861
+}
