@@ -1,0 +1,36 @@
+{
+  "contract_name": "Faucet",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "getEth",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_dropSizeInWei",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "constructor"
+    },
+    {
+      "payable": true,
+      "type": "fallback"
+    }
+  ],
+  "unlinked_binary": "0x606060405234610000576040516020806100f283398101604052515b60008190555b505b60c1806100316000396000f3006060604052361560235763ffffffff60e060020a600035041663cb05b93e8114602b575b60295b5b565b005b3460005760356049565b604080519115158252519081900360200190f35b60008054604051339173ffffffffffffffffffffffffffffffffffffffff83169181156108fc02919085818181858888f193505050501515608c57600091506091565b600191505b50905600a165627a7a723058200cde4a1d76565099fd978fd498196cb39a19654fda0031aea40e2b7437ee117a0029",
+  "networks": {},
+  "schema_version": "0.0.5",
+  "updated_at": 1492295305542
+}

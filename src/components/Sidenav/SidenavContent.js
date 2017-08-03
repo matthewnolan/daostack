@@ -114,9 +114,9 @@ class SidebarContent extends React.Component {
 
         <li><FlatButton href="#/app/page/about"><i className="nav-icon material-icons">info_outline</i><span className="nav-text">About</span></FlatButton></li>
 
-        <li><FlatButton href="#/app/presale"><i className="nav-icon material-icons">attach_money</i><span className="nav-text">Presale</span></FlatButton></li>
+        <li><FlatButton href="#/app/page/about"><i className="nav-icon material-icons">attach_money</i><span className="nav-text">Presale</span></FlatButton></li>
 
-        <li><FlatButton href="#/app/whitepaper"><i className="nav-icon material-icons">import_contacts</i><span className="nav-text">Whitepaper</span></FlatButton></li>
+        <li><FlatButton href="#/app/page/about"><i className="nav-icon material-icons">import_contacts</i><span className="nav-text">Whitepaper</span></FlatButton></li>
 
         <li><FlatButton href="https://github.com/daostack/daostack" target="_blank"><i className="nav-icon material-icons">fiber_manual_record</i><span className="nav-text">Github</span></FlatButton></li>
 

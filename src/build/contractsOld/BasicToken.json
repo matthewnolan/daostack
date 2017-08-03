@@ -1,0 +1,79 @@
+{
+  "contract_name": "BasicToken",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "totalSupply",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "name": "balance",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "transfer",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "Transfer",
+      "type": "event"
+    }
+  ],
+  "unlinked_binary": "0x6060604052341561000f57600080fd5b5b6102178061001f6000396000f300606060405263ffffffff60e060020a60003504166318160ddd811461003a57806370a082311461005f578063a9059cbb14610090575b600080fd5b341561004557600080fd5b61004d6100b4565b60405190815260200160405180910390f35b341561006a57600080fd5b61004d600160a060020a03600435166100ba565b60405190815260200160405180910390f35b341561009b57600080fd5b6100b2600160a060020a03600435166024356100d9565b005b60005481565b600160a060020a0381166000908152600160205260409020545b919050565b604060443610156100e957600080fd5b600160a060020a033316600090815260016020526040902054610112908363ffffffff6101a616565b600160a060020a033381166000908152600160205260408082209390935590851681522054610147908363ffffffff6101bf16565b600160a060020a0380851660008181526001602052604090819020939093559133909116907fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef9085905190815260200160405180910390a35b5b505050565b60006101b4838311156101db565b508082035b92915050565b60008282016101d0848210156101db565b8091505b5092915050565b8015156101e757600080fd5b5b505600a165627a7a723058202d3e5b08c51f8465cc779a2deb51a090ad0f87c91a455480605a0933751f579a0029",
+  "networks": {},
+  "schema_version": "0.0.5",
+  "updated_at": 1501540962618
+}

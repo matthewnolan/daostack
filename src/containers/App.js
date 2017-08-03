@@ -41,13 +41,17 @@ class App extends Component {
     let reputationAddrss
     let controllerInst
 
+
     const orgBoardAddress = OrganizationsBoard.networks[CURRENT_CHAIN_ID]['address']
+    console.log(OrganizationsBoard);
+
     const genesisAddress = GenesisScheme.networks[CURRENT_CHAIN_ID]['address']
     const simpleICOAddress = SimpleICO.networks[CURRENT_CHAIN_ID]['address']
 
-    // console.log("genesisAddress", genesisAddress);
     // console.log("orgBoardAddress", orgBoardAddress);
+    // console.log("genesisAddress", genesisAddress);
     // console.log("simpleICOAddress", simpleICOAddress);
+    // console.log("CURRENT_CHAIN_ID   ", CURRENT_CHAIN_ID);
 
     let promise = new Promise((resolve, reject) => {
 
@@ -85,6 +89,7 @@ class App extends Component {
           daoStackAddresses.nativeToken = tokenAddrss
           daoStackAddresses.nativeRep = reputationAddrss
           // this.setState({ daoStackAddresses })
+          // console.log(daoStackAddresses);
           callBack(daoStackAddresses);
         })
       }
@@ -101,13 +106,13 @@ class App extends Component {
       }
 
       this.getDaoStackAddresses(function(daoStackAddresses){
-        console.log(daoStackAddresses);
+        // console.log(daoStackAddresses);
         window.web3Instance.daoStackAddresses = daoStackAddresses
         window.dispatchEvent(web3Event);      
       })
     })
     .catch((err) => {
-      // console.error('Error in web3 initialization.', err)
+      console.error('Error in web3 initialization.', err)
     })
   }
 

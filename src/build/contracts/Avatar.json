@@ -1,0 +1,383 @@
+{
+  "contract_name": "Avatar",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "orgName",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_token",
+          "type": "address"
+        },
+        {
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "tokenDisapprove",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_action",
+          "type": "address"
+        },
+        {
+          "name": "_params",
+          "type": "bytes32[]"
+        }
+      ],
+      "name": "delegateAction",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_externalToken",
+          "type": "address"
+        },
+        {
+          "name": "_spender",
+          "type": "address"
+        },
+        {
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "externalTokenApprove",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "nativeReputation",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_externalToken",
+          "type": "address"
+        },
+        {
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "externalTokenTransferFrom",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_amountInWei",
+          "type": "uint256"
+        },
+        {
+          "name": "_to",
+          "type": "address"
+        }
+      ],
+      "name": "sendEther",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_externalToken",
+          "type": "address"
+        },
+        {
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "externalTokenTransfer",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "nativeToken",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_orgName",
+          "type": "bytes32"
+        },
+        {
+          "name": "_nativeToken",
+          "type": "address"
+        },
+        {
+          "name": "_nativeReputation",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "constructor"
+    },
+    {
+      "payable": true,
+      "type": "fallback"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_action",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_param",
+          "type": "bytes32[]"
+        }
+      ],
+      "name": "DelegateAction",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "_amountInWei",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "name": "_to",
+          "type": "address"
+        }
+      ],
+      "name": "SendEther",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_externalToken",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "ExternalTokenTransfer",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_externalToken",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "ExternalTokenTransferFrom",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_externalToken",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_spender",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "ExternalTokenApprove",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "_token",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "TokenDisapprove",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_sender",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "ReceiveEther",
+      "type": "event"
+    }
+  ],
+  "unlinked_binary": "0x6060604052341561000c57fe5b6040516060806109eb8339810160409081528151602083015191909201515b5b60008054600160a060020a03191633600160a060020a03161790555b600183905560028054600160a060020a03808516600160a060020a03199283161790925560038054928416929091169190911790555b5050505b61095a806100916000396000f300606060405236156100935763ffffffff60e060020a6000350416631386dc2d81146100db5780633df4062e146100fd578063541f5b321461013057806379c6ad9e1461019e57806389ae1c90146101d75780638da5cb5b14610203578063b756d5a21461022f578063cb16d4a21461026e578063dab0efff146102a1578063e1758bd8146102da578063f2fde38b14610306575b6100d95b604080513481529051600160a060020a033316917ff32a9f77675fd5917534c7746608fd3e309eac68fbdcbf5925e24ca97a704396919081900360200190a25b565b005b34156100e357fe5b6100eb610324565b60408051918252519081900360200190f35b341561010557fe5b61011c600160a060020a036004351660243561032a565b604080519115158252519081900360200190f35b341561013857fe5b60408051602480356004818101356020818102868101820190975281865261011c96600160a060020a03843516969395604495019291829190850190849080828437509496506103ff95505050505050565b604080519115158252519081900360200190f35b34156101a657fe5b61011c600160a060020a0360043581169060243516604435610577565b604080519115158252519081900360200190f35b34156101df57fe5b6101e7610659565b60408051600160a060020a039092168252519081900360200190f35b341561020b57fe5b6101e7610668565b60408051600160a060020a039092168252519081900360200190f35b341561023757fe5b61011c600160a060020a0360043581169060243581169060443516606435610677565b604080519115158252519081900360200190f35b341561027657fe5b61011c600435600160a060020a036024351661075b565b604080519115158252519081900360200190f35b34156102a957fe5b61011c600160a060020a03600435811690602435166044356107ef565b604080519115158252519081900360200190f35b34156102e257fe5b6101e76108d3565b60408051600160a060020a039092168252519081900360200190f35b341561030e57fe5b6100d9600160a060020a03600435166108e2565b005b60015481565b6000805433600160a060020a039081169116146103475760006000fd5b6040805160e060020a6323b872dd028152600160a060020a03338116600483018190526024830152604482018590529151918516916323b872dd9160648082019260009290919082900301818387803b151561039f57fe5b6102c65a03f115156103ad57fe5b505060408051600160a060020a03861681526020810185905281517fd23e88ecf1a38ccd3a7b62b200c5f7975695cab040e26939826be9dc15f5731993509081900390910190a15060015b5b92915050565b6000805433600160a060020a0390811691161461041c5760006000fd5b82600160a060020a03167fb21155199e48433b72d3ca8c7e6bf781ccc2b71a52cf0cb06f4a1e117618e80c836040518080602001828103825283818151815260200191508051906020019060200280838360008314610496575b80518252602083111561049657601f199092019160209182019101610476565b5050509050019250505060405180910390a282600160a060020a03166040518080603860020a7864656c6567617465416374696f6e28627974657333325b5d29028152506019019050604051809103902060e060020a9004836000604051602001526040518263ffffffff1660e060020a02815260040180828051906020019060200280838360008314610545575b80518252602083111561054557601f199092019160209182019101610525565b505050905001915050602060405180830381866102c65a03f4151561056657fe5b5050604051519150505b5b92915050565b6000805433600160a060020a039081169116146105945760006000fd5b83600160a060020a031663095ea7b384846040518363ffffffff1660e060020a0281526004018083600160a060020a0316600160a060020a0316815260200182815260200192505050600060405180830381600087803b15156105f357fe5b6102c65a03f1151561060157fe5b505060408051600160a060020a03868116825260208201869052825190881693507f15027ced8d0b6b382affbb51de0e1f48bb24ac55be01ca51537a5f9c4aeb35aa929181900390910190a25060015b5b9392505050565b600354600160a060020a031681565b600054600160a060020a031681565b6000805433600160a060020a039081169116146106945760006000fd5b6040805160e060020a6323b872dd028152600160a060020a0386811660048301528581166024830152604482018590529151918716916323b872dd9160648082019260009290919082900301818387803b15156106ed57fe5b6102c65a03f115156106fb57fe5b505060408051600160a060020a0387811682528681166020830152818301869052915191881692507f179c15de44aa7ab84896301974328eb40b5b40fe01cfe0fee2924ea712c3e843919081900360600190a25060015b5b949350505050565b6000805433600160a060020a039081169116146107785760006000fd5b604051600160a060020a0383169084156108fc029085906000818181858888f1935050505015156107a557fe5b604080518481529051600160a060020a038416917f22fca66666089f39bc900dd6605b489df4aae6260cc8ea8257594cfb8c84926c919081900360200190a25060015b5b92915050565b6000805433600160a060020a0390811691161461080c5760006000fd5b83600160a060020a031663a9059cbb84846040518363ffffffff1660e060020a0281526004018083600160a060020a0316600160a060020a0316815260200182815260200192505050600060405180830381600087803b151561086b57fe5b6102c65a03f1151561087957fe5b50505082600160a060020a031684600160a060020a03167f49dc2a60d2599a7b6932d78fb694c30dfc596fe4e0282b5d0fd184b52472c04d846040518082815260200191505060405180910390a35060015b5b9392505050565b600254600160a060020a031681565b60005433600160a060020a039081169116146108fe5760006000fd5b600160a060020a038116156109295760008054600160a060020a031916600160a060020a0383161790555b5b5b505600a165627a7a7230582009ed5874312bb087b2d3766daf506211c47735b75147e3e4ac087cc4a6c277880029",
+  "networks": {},
+  "schema_version": "0.0.5",
+  "updated_at": 1501774324307
+}

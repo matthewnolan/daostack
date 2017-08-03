@@ -1,0 +1,215 @@
+{
+  "contract_name": "Reputation",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "totalSupply",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "decimals",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_amount",
+          "type": "int256"
+        },
+        {
+          "name": "_to",
+          "type": "address"
+        }
+      ],
+      "name": "mint",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "name": "reputationOf",
+      "outputs": [
+        {
+          "name": "balance",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_amount",
+          "type": "uint256"
+        },
+        {
+          "name": "_to",
+          "type": "address"
+        }
+      ],
+      "name": "setReputation",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "payable": false,
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "value",
+          "type": "int256"
+        }
+      ],
+      "name": "Mint",
+      "type": "event"
+    }
+  ],
+  "unlinked_binary": "0x60606040526012600355341561001457600080fd5b5b5b60008054600160a060020a03191633600160a060020a03161790555b600160a060020a03331660009081526001602052604081208190556002555b5b61044c806100616000396000f300606060405236156100675763ffffffff60e060020a60003504166318160ddd811461006c578063313ce567146100915780638da5cb5b146100b6578063a909fc56146100e5578063db89c0441461011b578063ec8791521461014c578063f2fde38b14610182575b600080fd5b341561007757600080fd5b61007f6101a3565b60405190815260200160405180910390f35b341561009c57600080fd5b61007f6101a9565b60405190815260200160405180910390f35b34156100c157600080fd5b6100c96101af565b604051600160a060020a03909116815260200160405180910390f35b34156100f057600080fd5b610107600435600160a060020a03602435166101be565b604051901515815260200160405180910390f35b341561012657600080fd5b61007f600160a060020a03600435166102ee565b60405190815260200160405180910390f35b341561015757600080fd5b610107600435600160a060020a036024351661030d565b604051901515815260200160405180910390f35b341561018d57600080fd5b6101a1600160a060020a0360043516610390565b005b60025481565b60035481565b600054600160a060020a031681565b60008054819033600160a060020a039081169116146101dc57600080fd5b60008412610244575060025483906101fa908263ffffffff6103db16565b600255600160a060020a038316600090815260016020526040902054610226908263ffffffff6103db16565b600160a060020a0384166000908152600160205260409020556102a4565b5060025460001984029061025e908263ffffffff6103f716565b600255600160a060020a03831660009081526001602052604090205461028a908263ffffffff6103f716565b600160a060020a0384166000908152600160205260409020555b82600160a060020a03167f6f734b566c5e1cb976d9c7fba184b96a698a18931dd345168b16db217f8df0dd8560405190815260200160405180910390a2600191505b5b5092915050565b600160a060020a0381166000908152600160205260409020545b919050565b6000805433600160a060020a0390811691161461032957600080fd5b600160a060020a03821660009081526001602052604090205460025461036691859161035a9163ffffffff6103f716565b9063ffffffff6103db16565b60025550600160a060020a03811660009081526001602081905260409091208390555b5b92915050565b60005433600160a060020a039081169116146103ab57600080fd5b600160a060020a038116156103d65760008054600160a060020a031916600160a060020a0383161790555b5b5b50565b60008282016103ec84821015610410565b8091505b5092915050565b600061040583831115610410565b508082035b92915050565b8015156103d657600080fd5b5b505600a165627a7a72305820ad8223bd99af1a8cf0c9b7862c4d0cdb25a9725aa2c6c6ecfed0c806cf1d178d0029",
+  "networks": {
+    "1501450191663": {
+      "links": {},
+      "events": {
+        "0x6f734b566c5e1cb976d9c7fba184b96a698a18931dd345168b16db217f8df0dd": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "value",
+              "type": "int256"
+            }
+          ],
+          "name": "Mint",
+          "type": "event"
+        }
+      },
+      "updated_at": 1501540967285
+    },
+    "1501686942363": {
+      "links": {},
+      "events": {
+        "0x6f734b566c5e1cb976d9c7fba184b96a698a18931dd345168b16db217f8df0dd": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "value",
+              "type": "int256"
+            }
+          ],
+          "name": "Mint",
+          "type": "event"
+        }
+      },
+      "updated_at": 1501687170223
+    },
+    "1501691841145": {
+      "links": {},
+      "events": {
+        "0x6f734b566c5e1cb976d9c7fba184b96a698a18931dd345168b16db217f8df0dd": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "value",
+              "type": "int256"
+            }
+          ],
+          "name": "Mint",
+          "type": "event"
+        }
+      },
+      "updated_at": 1501693254248
+    }
+  },
+  "schema_version": "0.0.5",
+  "updated_at": 1501693254248
+}

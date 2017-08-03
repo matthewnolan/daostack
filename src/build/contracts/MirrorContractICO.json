@@ -1,0 +1,100 @@
+{
+  "contract_name": "MirrorContractICO",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "simpleICO",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "organization",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "destroy",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_recipient",
+          "type": "address"
+        }
+      ],
+      "name": "destroyAndSend",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_organization",
+          "type": "address"
+        },
+        {
+          "name": "_simpleICO",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "constructor"
+    },
+    {
+      "payable": true,
+      "type": "fallback"
+    }
+  ],
+  "unlinked_binary": "0x6060604052341561000c57fe5b60405160408061034e8339810160405280516020909101515b5b5b60008054600160a060020a03191633600160a060020a03161790555b5b60018054600160a060020a03808516600160a060020a03199283161790925560028054928416929091169190911790555b50505b6102c7806100876000396000f3006060604052361561005c5763ffffffff60e060020a6000350416631ebbede281146100f757806323bd4d7a1461012357806383197ef01461014f5780638da5cb5b14610161578063f2fde38b1461018d578063f5074f41146101ab575b6100f55b34151561006d5760006000fd5b600254600154604080516000602091820152815160e260020a63086fa9f3028152600160a060020a0393841660048201523384166024820152915192909316926321bea7cc923492604480820193929182900301818588803b15156100ce57fe5b6125ee5a03f115156100dc57fe5b505060405151151591506100f290505760006000fd5b5b565b005b34156100ff57fe5b6101076101c9565b60408051600160a060020a039092168252519081900360200190f35b341561012b57fe5b6101076101d8565b60408051600160a060020a039092168252519081900360200190f35b341561015757fe5b6100f56101e7565b005b341561016957fe5b610107610214565b60408051600160a060020a039092168252519081900360200190f35b341561019557fe5b6100f5600160a060020a0360043516610223565b005b34156101b357fe5b6100f5600160a060020a036004351661026f565b005b600254600160a060020a031681565b600154600160a060020a031681565b60005433600160a060020a039081169116146102035760006000fd5b600054600160a060020a0316ff5b5b565b600054600160a060020a031681565b60005433600160a060020a0390811691161461023f5760006000fd5b600160a060020a0381161561026a5760008054600160a060020a031916600160a060020a0383161790555b5b5b50565b60005433600160a060020a0390811691161461028b5760006000fd5b80600160a060020a0316ff5b5b505600a165627a7a72305820c60d0cace258599e59ce4570968b5fd686c5e390e0d3c3d9acad738c18007cb20029",
+  "networks": {},
+  "schema_version": "0.0.5",
+  "updated_at": 1501774324309
+}

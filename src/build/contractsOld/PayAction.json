@@ -1,0 +1,73 @@
+{
+  "contract_name": "PayAction",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "kill",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_param",
+          "type": "uint256"
+        }
+      ],
+      "name": "action",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "payable": false,
+      "type": "constructor"
+    },
+    {
+      "payable": true,
+      "type": "fallback"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "Pay",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "x",
+          "type": "uint256"
+        }
+      ],
+      "name": "Error",
+      "type": "event"
+    }
+  ],
+  "unlinked_binary": "0x6060604052341561000f57600080fd5b5b5b5b610231806100216000396000f300606060405236156100305763ffffffff60e060020a60003504166341c0e1b5811461006d578063af13062814610082575b61006b5b7f2e36a7093f25f22bd4cbdeb6040174c3ba4c5fe8f1abc04e7c3c48f26c7413e0600260405190815260200160405180910390a15b565b005b341561007857600080fd5b61006b6100ac565b005b341561008d57600080fd5b6100986004356100ba565b604051901515815260200160405180910390f35b33600160a060020a0316ff5b565b6000818180600160a060020a03831663b837c58e82604051602001526040518163ffffffff1660e060020a028152600401602060405180830381600087803b151561010457600080fd5b6102c65a03f1151561011557600080fd5b5050506040518051925050600160a060020a038316637ba136806000604051602001526040518163ffffffff1660e060020a028152600401602060405180830381600087803b151561016657600080fd5b6102c65a03f1151561017757600080fd5b5050506040518051905090507f357b676c439b9e49b4410f8eb8680bee4223724802d8e3fd422e1756f87b475f8282604051600160a060020a03909216825260208201526040908101905180910390a1600160a060020a03821681156108fc0282604051600060405180830381858888f1935050505015156101f857600080fd5b600193505b5050509190505600a165627a7a723058207f04f3eb7fa4b03cab3af5430cfc28df8ab7bcd6ac72dfb55336678ff34b9f880029",
+  "networks": {},
+  "schema_version": "0.0.5",
+  "updated_at": 1501540962617
+}

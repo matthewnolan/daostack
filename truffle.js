@@ -1,5 +1,10 @@
 // Allows us to use ES6 in our migrations and tests.
-require('babel-register')
+require("babel-polyfill");
+require("babel-register")({
+  "presets": ["es2015"],
+  "plugins": ["syntax-async-functions","transform-regenerator"]
+});
+
 
 module.exports = {
   build: 'webpack',
@@ -13,7 +18,7 @@ module.exports = {
       host: "127.0.0.1",
       port: 8545,
       network_id: "*",
-      from: "0x626ce88A90B00FDA787973d4e65c24344Ed7BFE5",
+      from: "",
       gas: 4700036
     },
     staging: {

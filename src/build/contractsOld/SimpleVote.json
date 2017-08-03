@@ -1,0 +1,387 @@
+{
+  "contract_name": "SimpleVote",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "proposalId",
+          "type": "bytes32"
+        }
+      ],
+      "name": "closeProposal",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "proposalId",
+          "type": "bytes32"
+        }
+      ],
+      "name": "voteStatus",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256[4]"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "setOwner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_reputationSystem",
+          "type": "address"
+        }
+      ],
+      "name": "setReputationSystem",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "proposalId",
+          "type": "bytes32"
+        },
+        {
+          "name": "yes",
+          "type": "bool"
+        },
+        {
+          "name": "voter",
+          "type": "address"
+        }
+      ],
+      "name": "voteProposal",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "proposalId",
+          "type": "bytes32"
+        }
+      ],
+      "name": "uniqueId",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "proposalId",
+          "type": "bytes32"
+        }
+      ],
+      "name": "newProposal",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "proposalId",
+          "type": "bytes32"
+        }
+      ],
+      "name": "voteResults",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "payable": false,
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "_proposalId",
+          "type": "bytes32"
+        }
+      ],
+      "name": "NewProposal",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "_voter",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_proposalId",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "_yes",
+          "type": "bool"
+        },
+        {
+          "indexed": false,
+          "name": "_reputation",
+          "type": "uint256"
+        }
+      ],
+      "name": "VoteProposal",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "_proposalId",
+          "type": "bytes32"
+        }
+      ],
+      "name": "CloseProposal",
+      "type": "event"
+    }
+  ],
+  "unlinked_binary": "0x6060604052341561000f57600080fd5b5b5b5b61082a806100216000396000f300606060405236156100725763ffffffff60e060020a600035041663078f872c81146100775780631290b213146100a157806313af4035146100f057806331143cee146101235780636ab40cdd1461014457806393749d261461017f578063ac50af5f146101a7578063ea5740ea146101d1575b600080fd5b341561008257600080fd5b61008d6004356101fb565b604051901515815260200160405180910390f35b34156100ac57600080fd5b6100b76004356102c4565b6040518082608080838360005b838110156100dd5780820151818401525b6020016100c4565b5050505090500191505060405180910390f35b34156100fb57600080fd5b61008d600160a060020a0360043516610371565b604051901515815260200160405180910390f35b341561012e57600080fd5b610142600160a060020a03600435166103a4565b005b341561014f57600080fd5b61008d6004356024351515600160a060020a03604435166103df565b604051901515815260200160405180910390f35b341561018a57600080fd5b610195600435610634565b60405190815260200160405180910390f35b34156101b257600080fd5b61008d600435610650565b604051901515815260200160405180910390f35b34156101dc57600080fd5b61008d600435610707565b604051901515815260200160405180910390f35b6000806102066107b0565b60015433600160a060020a0390811691161461022157600080fd5b61022a84610634565b600081815260026020526040902090925081908151815560208201518160010155604082015160038201805460ff19169115159190911790556060820151600390910180549115156101000261ff0019909216919091179055507fcc0c35dc01446e741be6aeeeb22693a96b4b42887e92d84a17181687b6a418188260405190815260200160405180910390a1600192505b5b5050919050565b6102cc6107d7565b60008060008060006102dd87610634565b6000818152600260205260409020805460018201546003909201549297509550935060ff1661030d576000610310565b60015b60008681526002602052604090206003015460ff918216935061010090041661033a57600061033d565b60015b60ff1690506080604051908101604052808581526020018481526020018381526020018281525095505b5050505050919050565b6000600160a060020a0382161561039e5760018054600160a060020a031916600160a060020a0384161790555b5b919050565b60015433600160a060020a039081169116146103bf57600080fd5b60008054600160a060020a031916600160a060020a0383161790555b5b50565b600154600090819081908190819033600160a060020a0390811691161461040557600080fd5b61040e88610634565b600081815260026020526040902060038101549195509350610100900460ff168061043e5750600383015460ff16155b1561044c5760009450610628565b600160a060020a038616600090815260028401602052604090205460ff16156104785760009450610628565b60008054600160a060020a03169063db89c0449088906040516020015260405160e060020a63ffffffff8416028152600160a060020a039091166004820152602401602060405180830381600087803b15156104d357600080fd5b6102c65a03f115156104e457600080fd5b505050604051805160008054919450600160a060020a0390911691506318160ddd90604051602001526040518163ffffffff1660e060020a028152600401602060405180830381600087803b151561053b57600080fd5b6102c65a03f1151561054c57600080fd5b5050506040518051915050861561057757825461057090839063ffffffff61078416565b8355610593565b600183015461058d90839063ffffffff61078416565b60018401555b6002815b04836000015411806105b057506002815b048360010154115b156105c75760038301805461ff0019166101001790555b7f40ee33b51039e846dcb69e2be06e4d8cc2840848ee529dd540e41943f5c47f7586858985604051600160a060020a0390941684526020840192909252151560408084019190915260608301919091526080909101905180910390a1600194505b5b505050509392505050565b600081604051908152602001604051809103902090505b919050565b6001546000908190819033600160a060020a0390811691161461067257600080fd5b61067b84610634565b60008181526002602052604090206003810154919350915060ff16806106aa57506003810154610100900460ff165b156106b857600092506102bc565b60038101805460ff191660011790557f2fa055ed2a16bf675cb77388be42cc263fd4f3feaac282dbcce8ae28691c960b8260405190815260200160405180910390a1600192505b5b5050919050565b6001546000908190819033600160a060020a0390811691161461072957600080fd5b61073284610634565b6000818152600260205260409020600181015481549294509092509011801561076457506003810154610100900460ff165b1561077257600192506102bc565b600092506102bc565b5b5b5050919050565b6000828201610795848210156107a0565b8091505b5092915050565b8015156103db57600080fd5b5b50565b60806040519081016040908152600080835260208301819052908201819052606082015290565b60806040519081016040526004815b60008152602001906001900390816107e657905050905600a165627a7a723058205583ff68a12f7e691e2d296baf8ec786b319b0abb031047cbef82f3ae38296360029",
+  "networks": {
+    "1501450191663": {
+      "events": {
+        "0x2fa055ed2a16bf675cb77388be42cc263fd4f3feaac282dbcce8ae28691c960b": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "_proposalId",
+              "type": "bytes32"
+            }
+          ],
+          "name": "NewProposal",
+          "type": "event"
+        },
+        "0x40ee33b51039e846dcb69e2be06e4d8cc2840848ee529dd540e41943f5c47f75": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "_voter",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "_proposalId",
+              "type": "bytes32"
+            },
+            {
+              "indexed": false,
+              "name": "_yes",
+              "type": "bool"
+            },
+            {
+              "indexed": false,
+              "name": "_reputation",
+              "type": "uint256"
+            }
+          ],
+          "name": "VoteProposal",
+          "type": "event"
+        },
+        "0xcc0c35dc01446e741be6aeeeb22693a96b4b42887e92d84a17181687b6a41818": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "_proposalId",
+              "type": "bytes32"
+            }
+          ],
+          "name": "CloseProposal",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xe328d7f95e939f4e71ce14683a61aace5c889b33",
+      "updated_at": 1501540967272
+    },
+    "1501686942363": {
+      "events": {
+        "0x2fa055ed2a16bf675cb77388be42cc263fd4f3feaac282dbcce8ae28691c960b": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "_proposalId",
+              "type": "bytes32"
+            }
+          ],
+          "name": "NewProposal",
+          "type": "event"
+        },
+        "0x40ee33b51039e846dcb69e2be06e4d8cc2840848ee529dd540e41943f5c47f75": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "_voter",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "_proposalId",
+              "type": "bytes32"
+            },
+            {
+              "indexed": false,
+              "name": "_yes",
+              "type": "bool"
+            },
+            {
+              "indexed": false,
+              "name": "_reputation",
+              "type": "uint256"
+            }
+          ],
+          "name": "VoteProposal",
+          "type": "event"
+        },
+        "0xcc0c35dc01446e741be6aeeeb22693a96b4b42887e92d84a17181687b6a41818": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "_proposalId",
+              "type": "bytes32"
+            }
+          ],
+          "name": "CloseProposal",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x23f993c3e44d6e7676e410eb19317b46624159d0",
+      "updated_at": 1501687170193
+    },
+    "1501691841145": {
+      "events": {
+        "0x2fa055ed2a16bf675cb77388be42cc263fd4f3feaac282dbcce8ae28691c960b": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "_proposalId",
+              "type": "bytes32"
+            }
+          ],
+          "name": "NewProposal",
+          "type": "event"
+        },
+        "0x40ee33b51039e846dcb69e2be06e4d8cc2840848ee529dd540e41943f5c47f75": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "_voter",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "_proposalId",
+              "type": "bytes32"
+            },
+            {
+              "indexed": false,
+              "name": "_yes",
+              "type": "bool"
+            },
+            {
+              "indexed": false,
+              "name": "_reputation",
+              "type": "uint256"
+            }
+          ],
+          "name": "VoteProposal",
+          "type": "event"
+        },
+        "0xcc0c35dc01446e741be6aeeeb22693a96b4b42887e92d84a17181687b6a41818": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "_proposalId",
+              "type": "bytes32"
+            }
+          ],
+          "name": "CloseProposal",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xcb3ddf298667580e38f3e0bf84f848256267ca2d",
+      "updated_at": 1501693254238
+    }
+  },
+  "schema_version": "0.0.5",
+  "updated_at": 1501693254238
+}

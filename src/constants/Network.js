@@ -1,7 +1,9 @@
 import GenesisScheme from 'build/contracts/GenesisScheme.json'
 
+console.log(GenesisScheme);
+
 let currentChainId = Object.keys(GenesisScheme.networks).pop()
-let currentChain = 'testrpc'
+let currentChain = 'kovan'
 
 const ethEnv = process.env.ETH_ENV
 
