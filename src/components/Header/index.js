@@ -17,6 +17,10 @@ import IconMenu from 'material-ui/IconMenu';
 import MenuItem from 'material-ui/MenuItem';
 import IconButton from 'material-ui/IconButton/IconButton';
 
+import SweetAlert from 'sweetalert-react';
+import 'sweetalert/dist/sweetalert.css';
+
+
 import {
   changeEthAddress
 } from '../../actions';
@@ -34,7 +38,8 @@ class Web3Bar extends React.Component {
     this.state = {
       handleChangeEthAddress: this.props.handleChangeEthAddress,
       tknBalance: 0,
-      ethBalance: 0
+      ethBalance: 0,
+      sweetAlertOpen: false,
     }
   };
 
@@ -42,6 +47,11 @@ class Web3Bar extends React.Component {
     this.state.handleChangeEthAddress("val");
   };
 
+  handleRequestClose = () => {
+    this.setState({
+      sweetAlertOpen: false,
+    });
+  };  
 
   componentDidMount() {
 
@@ -89,30 +99,34 @@ class Web3Bar extends React.Component {
 
     if (typeof window.web3Instance == 'object'){
       updateBalance()
-    } else {
+    } else {     
       window.addEventListener("web3Event", () => { 
         web3 = window.web3Instance.web3
         updateBalance()
       });    
     }
 
+
   }
   render() {
     return (
-      <ul className="list-unstyled list-inline">
-        <li className="list-inline-item">
-          <FlatButton style={ImgIconButtonStyle}><b>ETH:</b> {this.state.ethBalance}</FlatButton>
-        </li>
-        <li className="list-inline-item">
-          <FlatButton style={ImgIconButtonStyle}><b>STK:</b> {this.state.tknBalance}</FlatButton>
-        </li>
-        <li className="list-inline-item">
-          <FlatButton style={ImgIconButtonStyle}><i className="nav-icon nav-dot material-icons color-success" style={{marginTop: "13px"}}>fiber_manual_record</i></FlatButton>
-        </li>
-      </ul>
+      <div>
+        <ul className="list-unstyled list-inline">
+          <li className="list-inline-item">
+            <FlatButton style={ImgIconButtonStyle}><b>ETH:</b> {this.state.ethBalance}</FlatButton>
+          </li>
+          <li className="list-inline-item">
+            <FlatButton style={ImgIconButtonStyle}><b>STK:</b> {this.state.tknBalance}</FlatButton>
+          </li>
+          <li className="list-inline-item">
+            <FlatButton style={ImgIconButtonStyle}><i className="nav-icon nav-dot material-icons color-success" style={{marginTop: "13px"}}>fiber_manual_record</i></FlatButton>
+          </li>
+        </ul>
+      </div>
     )
   }
 }
+
 
 
 

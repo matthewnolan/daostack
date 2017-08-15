@@ -92,9 +92,6 @@ class SidebarContent extends React.Component {
     return (
       <ul className="nav" ref={(c) => { this.nav = c; }}>
         <li className="nav-header"><span>Welcome</span></li>
-        <li><FlatButton href="#/app/welcome"><i className="nav-icon material-icons">pie_chart_outlined</i><span className="nav-text">Welcome</span></FlatButton></li>
-
-        <li><FlatButton href="#/app/dashboard"><i className="nav-icon material-icons">dashboard</i><span className="nav-text">Dashboard</span></FlatButton></li>
 
         <li><FlatButton href="#/app/getstack"><i className="nav-icon material-icons">list</i><span className="nav-text">Get Stack</span></FlatButton></li>
 
@@ -121,14 +118,6 @@ class SidebarContent extends React.Component {
         <li><FlatButton href="https://github.com/daostack/daostack" target="_blank"><i className="nav-icon material-icons">fiber_manual_record</i><span className="nav-text">Github</span></FlatButton></li>
 
         <li><FlatButton href="https://daostack.slack.com/" target="_blank"><i className="nav-icon material-icons">fiber_manual_record</i><span className="nav-text">Slack</span></FlatButton></li>
-
-
-
-
-
-
-
-
 
 
 

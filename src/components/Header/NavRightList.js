@@ -21,7 +21,7 @@ class NavRightList extends React.Component {
 
   render() {
     return (
-      <ul className="list-unstyled float-right">
+      <ul className="list-unstyled float-right hidden">
         <li style={{marginRight: '10px'}}>
           <IconMenu
             iconButtonElement={<IconButton style={ImgIconButtonStyle}><img src="assets/images/g1.jpg" alt="" className="rounded-circle img30_30" /></IconButton>}

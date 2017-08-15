@@ -28,11 +28,30 @@ import lightTheme from './themes/lightTheme';
 import darkTheme from './themes/darkTheme';
 import grayTheme from './themes/grayTheme';
 
+import SweetAlert from 'sweetalert-react';
+import 'sweetalert/dist/sweetalert.css';
+
+
 
 injectTapEventPlugin(); // Needed for onTouchTap for Material UI
 
 
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      sweetAlertOpen: false,
+    }
+  };
+
+
+  handleRequestClose = () => {
+    this.setState({
+      sweetAlertOpen: false,
+    });
+  };  
+
 
   getDaoStackAddresses = (callBack) => {
     const web3 = window.web3Instance.web3
@@ -104,6 +123,11 @@ class App extends Component {
       window.web3Instance = {
         web3: results.payload.web3Instance
       }
+      if (results.payload.web3Provider === false){
+        this.setState({
+          sweetAlertOpen: true,
+        });  
+      }
 
       this.getDaoStackAddresses(function(daoStackAddresses){
         // console.log(daoStackAddresses);
@@ -149,6 +173,12 @@ class App extends Component {
                     }>
             {this.props.children}
           </div>
+          <SweetAlert
+            show={this.state.sweetAlertOpen}
+            title="Not connected to a network. Please use a wallet like MetaMask."
+            onConfirm={this.handleRequestClose}
+            type="error"
+          />           
         </div>
       </MuiThemeProvider>
     );

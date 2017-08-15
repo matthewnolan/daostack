@@ -21,7 +21,8 @@ let getWeb3 = new Promise(function(resolve, reject) {
       web3 = new Web3(web3.currentProvider)
 
       results = {
-        web3Instance: web3
+        web3Instance: web3,
+        web3Provider: true
       }
 
       console.log('Injected web3 detected.');
@@ -36,7 +37,8 @@ let getWeb3 = new Promise(function(resolve, reject) {
       web3 = new Web3(provider)
 
       results = {
-        web3Instance: web3
+        web3Instance: web3,
+        web3Provider: false
       }
 
       console.log('No web3 instance injected, using Local web3.');

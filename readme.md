@@ -6,10 +6,10 @@ npm run build
 
 after truffle migrate: 
 rm -rf src/build
-cp build src/build
+cp -a build src/build
 
 
-note: current chain is currently hard coded. 
+note: ccurrentChain is hard coded. 
 let currentChain = 'kovan'
 
 

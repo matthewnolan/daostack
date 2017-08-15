@@ -22,7 +22,7 @@ class NavLeftList extends React.Component {
 
   render() {
     return (
-      <ul className="list-unstyled list-inline">
+      <ul className="list-unstyled list-inline hidden">
         <li className="list-inline-item">
           <IconMenu
             iconButtonElement={<IconButton
